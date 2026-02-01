@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ghd378uum1lf"]
+
+[ext_resource type="Script" uid="uid://do28sdigu3ve" path="res://pieza.gd" id="1_a3vs7"]
+
+[node name="Pieza" type="Sprite2D" unique_id=862193372]
+region_enabled = true
+region_filter_clip_enabled = true
+script = ExtResource("1_a3vs7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=995247133]

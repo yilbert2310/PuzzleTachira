@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://bo7fhn8i1sr41"]
+
+[ext_resource type="Script" uid="uid://bsg43tbvg8jlg" path="res://principal.gd" id="1_4to2k"]
+[ext_resource type="Texture2D" uid="uid://d0rxrs8itp8wi" path="res://imagen santo cristo1769830618.png" id="2_5hs68"]
+[ext_resource type="Texture2D" uid="uid://po47vsyr4oom" path="res://fondo.jpg" id="3_5hs68"]
+[ext_resource type="Texture2D" uid="uid://3hagheg4i2iq" path="res://marco.png" id="4_aaorx"]
+[ext_resource type="Texture2D" uid="uid://cs8qnmilbv24" path="res://pergamino.png" id="5_aaorx"]
+
+[sub_resource type="SystemFont" id="SystemFont_aaorx"]
+font_names = PackedStringArray("Cursive")
+
+[sub_resource type="FontVariation" id="FontVariation_5eh06"]
+base_font = SubResource("SystemFont_aaorx")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ohavl"]
+font = SubResource("FontVariation_5eh06")
+font_size = 65
+font_color = Color(0.7734135, 0.75513923, 0.03802984, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_5eh06"]
+font_names = PackedStringArray("Cursive")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nbow7"]
+font = SubResource("SystemFont_5eh06")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_nbow7"]
+font_names = PackedStringArray("Cursive")
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hs68"]
+line_spacing = 4.0
+paragraph_spacing = 5.0
+font = SubResource("SystemFont_nbow7")
+font_size = 20
+font_color = Color(0.8406144, 0.02917342, 7.70092e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaorx"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.9562785, 0.8590911, 3.465414e-06, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3114826, 0.11713704, 1.4439226e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5eh06"]
+bg_color = Color(0.53324014, 0.21704939, 2.4065375e-07, 1)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_reqdc"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_vvh27"]
+
+[node name="Juego" type="Node2D" unique_id=721496964]
+script = ExtResource("1_4to2k")
+imagen_santo_cristo = ExtResource("2_5hs68")
+
+[node name="FondoRojo" type="TextureRect" parent="." unique_id=262862570]
+z_index = -100
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1282.0
+offset_bottom = 721.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5hs68")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="GuiaFondo" type="Sprite2D" parent="." unique_id=1262739649]
+modulate = Color(0.17785347, 0.17785347, 0.17785347, 1)
+position = Vector2(340, 191)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_5hs68")
+centered = false
+
+[node name="Marco" type="Sprite2D" parent="." unique_id=1469165353]
+position = Vector2(641, 356.49997)
+scale = Vector2(1.8599563, 1.6142856)
+texture = ExtResource("4_aaorx")
+
+[node name="Titulo" type="Label" parent="." unique_id=998198821]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 303.0
+offset_top = 8.0
+offset_right = 987.0
+offset_bottom = 93.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.91764706, 0.96862745, 0.3019608, 1)
+theme_override_font_sizes/font_size = 50
+text = "Santo Cristo de La Grita"
+label_settings = SubResource("LabelSettings_ohavl")
+
+[node name="Titulo2" type="Label" parent="." unique_id=178833064]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 518.0
+offset_top = 546.0
+offset_right = 793.0
+offset_bottom = 590.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.91746056, 0.96707636, 0.9999998, 1)
+theme_override_font_sizes/font_size = 30
+text = "EL ROMPECABEZAS"
+label_settings = SubResource("LabelSettings_nbow7")
+
+[node name="ContenedorDePiezas" type="Node2D" parent="." unique_id=57439752]
+
+[node name="MensajeVictoria" type="TextureRect" parent="." unique_id=275195327]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 80.0
+offset_right = 867.0
+offset_bottom = 629.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_aaorx")
+
+[node name="Label" type="Label" parent="MensajeVictoria" unique_id=313789970]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 86.0
+offset_right = 322.0
+offset_bottom = 352.15387
+scale = Vector2(1.3, 1.3)
+theme_override_colors/font_color = Color(0.3476031, 0.26044232, 0.09332148, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "              
+            ¡FELICIDADES! 
+
+            Has completado 
+              el puzzle del 
+       Santo Cristo de la Grita"
+label_settings = SubResource("LabelSettings_5hs68")
+
+[node name="BotonJugar" type="Button" parent="." unique_id=1719735234]
+offset_left = 590.0
+offset_top = 624.0
+offset_right = 648.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_aaorx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5eh06")
+text = "JUGAR"
+icon = SubResource("CanvasTexture_reqdc")
+
+[node name="BotonSalir" type="Button" parent="." unique_id=115378930]
+offset_left = 591.0
+offset_top = 664.0
+offset_right = 661.0
+offset_bottom = 700.0
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_aaorx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5eh06")
+text = "SALIR"
+icon = SubResource("CanvasTexture_vvh27")
+
+[connection signal="pressed" from="BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="BotonSalir" to="." method="_on_boton_salir_pressed"]
